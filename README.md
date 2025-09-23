@@ -69,7 +69,7 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
 
 5. Crie um algoritmo que simule o jogo do "Pedra, papel e tesoura". O algoritmo começa por gerar aleatoriamente um valor (ver nota) no conjunto `{0, 1, 2}`, que correspondem a `{"Papel", "Pedra", "Tesoura"}`. Depois coloca numa variável do tipo _String_ a palavra correspondente ao valor aleatório gerado. Posteriormente, solicita ao utilizador para introduzir a sua escolha, devendo este escrever "Papel", "Pedra" ou "Tesoura" (valor lido para outra variável do tipo _String_). Por fim, indica quem ganhou (o programa ou o utilizador) seguindo as regras do jogo: a tesoura ganha ao papel, a pedra ganha à tesoura e o papel ganha à pedra.
 
-    - Nota: utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm.
+    - Nota: utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
 
 ---
 
@@ -108,6 +108,60 @@ Se (ano % 4 == 0) então:
 Senão:
    Exibir "Ano não é bissexto"
 ```
+
+## Exercício Autónomo (TPC) :rocket:
+
+> :bulb: Antes da próxima aula PL tente resolver este exercício de consolidação.
+
+Crie um algoritmo (`Quadratic`) que resolva uma equação quadrática do tipo $ax^2 + bx + c = 0$.
+
+- Solicite ao utilizador os valores de a, b e c.
+
+- Calcule o discriminante: $\Delta = b^2 - 4ac$.
+
+- Caso $\Delta < 0$: mostre "Sem soluções reais".
+
+- Caso $\Delta = 0$: mostre "Uma solução real" e calcule $x = -b / (2a)$.
+
+- Caso $\Delta > 0$: mostre "Duas soluções reais" e calcule
+$x_1 = \frac{-b + \sqrt{\Delta}}{2a}$,
+$x_2 = \frac{-b - \sqrt{\Delta}}{2a}$.
+
+### Exemplos de entradas e saídas esperadas
+
+**Situação 1** – Sem soluções reais (Δ < 0)
+
+- Equação: $x^2 + 2x + 5 = 0$
+
+- a = 1, b = 2, c = 5
+
+- $\Delta = b^2 - 4ac = 2^2 - 4(1)(5) = 4 - 20 = -16$
+
+- Resultado esperado: "Sem soluções reais"
+
+**Situação 2** – Uma solução real (Δ = 0)
+
+- Equação: $x^2 - 2x + 1 = 0$
+
+- a = 1, b = -2, c = 1
+
+- $\Delta = (-2)^2 - 4(1)(1) = 4 - 4 = 0$
+
+- Resultado esperado: "Uma solução real: x = 1"
+
+**Situação 3** – Duas soluções reais (Δ > 0)
+
+- Equação: $x^2 - 3x + 2 = 0$
+
+- a = 1, b = -3, c = 2
+
+- $\Delta = (-3)^2 - 4(1)(2) = 9 - 8 = 1$
+
+- $x_1 = \frac{-(-3) + \sqrt{1}}{2(1)} = \frac{3 + 1}{2} = 2$
+
+- $x_2 = \frac{-(-3) - \sqrt{1}}{2(1)} = \frac{3 - 1}{2} = 1$
+
+- Resultado esperado: "Duas soluções reais: x₁ = 2, x₂ = 1"
 
 ---
 
