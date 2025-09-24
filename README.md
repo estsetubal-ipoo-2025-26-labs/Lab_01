@@ -93,8 +93,8 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
    - Por fim, indica quem ganhou (i.e., o programa ou o utilizador) seguindo as regras do jogo: a tesoura ganha ao papel, a pedra ganha à tesoura e o papel ganha à pedra.
      - Pense na forma mais simples de testar todas as possíveis situações/condições; 
 
-      > [!TIP]
-      > Utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
+   > [!TIP]
+   > Utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
 
 ---
 
