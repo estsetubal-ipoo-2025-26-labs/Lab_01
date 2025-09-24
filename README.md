@@ -12,11 +12,13 @@ Para alternar entre a execução de exercícios diferentes, adicione apenas um b
 
 Sempre que necessitar de mudar de algoritmo para execução, altere a função invocada neste bloco.
 
-:warning: Não se esqueça de guardar o seu trabalho! A aplicação permite guardar o "projeto" através de `File > Save As...` (ficheiro com extensão `.fprg`). Mais tarde, pode voltar a abri-lo na aplicação.
+> [!CAUTION]
+> Não se esqueça de guardar o seu trabalho! A aplicação permite guardar o "projeto" através de `File > Save As...` (ficheiro com extensão `.fprg`). Mais tarde, pode voltar a abri-lo na aplicação.
 
 ## Exercícios :pen:
 
-> :bulb: No final deste enunciado encontra "🆘 Ajudas" para alguns exercícios, mas só as deverá utilizar se não conseguir mesmo encontrar a solução.
+> [!TIP]
+> No final deste enunciado encontra "🆘 Ajudas" para alguns exercícios, mas só as deverá utilizar se não conseguir mesmo encontrar a solução.
 
 1. Crie um algoritmo (`C2F`) que converte temperaturas em graus _celsius_ para graus _fahrenheit_. A temperatura a converter deve ser solicitada ao utilizador.
 
@@ -30,7 +32,7 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
 
 2. Crie um algoritmo (`Swap`) que solicita ao utilizador dois valores inteiros (um de cada vez, guardando-os em variáveis diferentes, e.g., `x` e `y`) e posteriormente troque o conteúdo das variáveis e as mostre. 
 
-    - :bulb: Poderá necessitar de uma terceira variável para a troca.
+    - :bulb: Irá necessitar de uma terceira variável para a troca, dado que não consegue fazer duas operaçoes de atribuição em simultâneo.
 
     - Execução exemplificativa desejada:
 
@@ -60,58 +62,49 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
     
     - :bulb: Ser _divisível_ significa que o resto da divisão é `0` (zero). Utilize o **operador _módulo_** para este efeito.
 
+    > [!TIP]
     > **Descrição da lógica necessária a implementar**
     > - Primeiro, verifica-se se o ano é divisível por 4. Se não for, o ano não é bissexto.
     > - Se for divisível por 4, verifica-se se é divisível por 100. Se não for, o ano é bissexto.
     > - Se for divisível por 100, então precisa também ser divisível por 400 para ser bissexto. Caso contrário, não é.
 
----
-
-5. Crie um algoritmo que simule o jogo do "Pedra, papel e tesoura". O algoritmo começa por gerar aleatoriamente um valor (ver nota) no conjunto `{0, 1, 2}`, que correspondem a `{"Papel", "Pedra", "Tesoura"}`. Depois coloca numa variável do tipo _String_ a palavra correspondente ao valor aleatório gerado. Posteriormente, solicita ao utilizador para introduzir a sua escolha, devendo este escrever "Papel", "Pedra" ou "Tesoura" (valor lido para outra variável do tipo _String_). Por fim, indica quem ganhou (o programa ou o utilizador) seguindo as regras do jogo: a tesoura ganha ao papel, a pedra ganha à tesoura e o papel ganha à pedra.
-
-    - Nota: utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
+    - Teste o seu algoritmo:
+      - Exemplos de anos bissextos (366 dias): 2008, 2012, 2020.
+      - Exemplos de anos não bissextos (365 dias): 2005, 2011, 2019.
 
 ---
 
-6. Idealize um pequeno problema que gostasse de resolver através de um algoritmo. Proceda à sua implementação.
+1. Crie um algoritmo (`RockPaperScissors`) que simule o jogo do "Pedra, papel ou tesoura". 
+   
+   - O algoritmo começa por solicitar ao utilizador a sua escolha, devendo este escrever "Papel", "Pedra" ou "Tesoura" (valor lido para uma variável do tipo _String_);
+   
+   - Como não há forma de "obrigar" o utilizador a fornecer uma opção válida, deve ser feita uma **validação** (_if_), i.e., se não for uma palavra válida, o algoritmo deve terminar com a mensagem `"Opção inválida!"`. Tente utilizar uma única condição/if. Se for válida, executa os passos seguintes;
+   
+   - Com o intuito de simplificar os passos seguintes, o algoritmo deverá **converter** a opção do utilizador para um valor numérico, i.e., coloque numa variável inteira um valor de acordo com o introduzido pelo utilizador:
 
-## 🆘 Ajudas
+      Valor convertido | Valor introduzido
+      :---: | :---:
+      0 | "Pedra"
+      1 | "Papel"
+      2 | "Tesoura"
+  
+   - O algoritmo depois deve gerar aleatoriamente um valor (ver dica abaixo) no conjunto `{0, 1, 2}`, que correspondem respetivamente a `{"Pedra", "Papel", "Tesoura"}` (tal e qual como no passo anterior).
+  
+   - Por fim, indica quem ganhou (i.e., o programa ou o utilizador) seguindo as regras do jogo: a tesoura ganha ao papel, a pedra ganha à tesoura e o papel ganha à pedra.
+     - Pense na forma mais simples de testar todas as possíveis situações/condições; 
 
-Se não conseguir encontrar uma solução, utilize os seguintes algoritmos em _pseudo-código_ para o ajudar.
+      > [!TIP]
+      > Utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
 
-### `Grade`
+---
 
-```markdown
-Entrada: nota
-Se (nota >= 90) então:
-   Exibir "Excelente"
-Senão se (nota >= 70) então:
-   Exibir "Bom"
-Senão se (nota >= 50) então:
-   Exibir "Satisfatório"
-Senão:
-   Exibir "Insuficiente"
-```
+6. Se tiver tempo durante o laboratório, idealize um pequeno problema que gostasse de resolver através de um algoritmo. Proceda à sua implementação.
 
-### `LeapYear`
-
-```pseudocódigo
-Entrada: ano
-Se (ano % 4 == 0) então:
-   Se (ano % 100 == 0) então:
-      Se (ano % 400 == 0) então:
-         Exibir "Ano bissexto"
-      Senão:
-         Exibir "Ano não é bissexto"
-   Senão:
-      Exibir "Ano bissexto"
-Senão:
-   Exibir "Ano não é bissexto"
-```
 
 ## Exercício Autónomo (TPC) :rocket:
 
-> :bulb: Antes da próxima aula PL tente resolver este exercício de consolidação.
+> [!IMPORTANT]
+> Antes da próxima aula PL tente resolver este exercício de consolidação.
 
 Crie um algoritmo (`Quadratic`) que resolva uma equação quadrática do tipo $ax^2 + bx + c = 0$.
 
@@ -162,6 +155,41 @@ $x_2 = \frac{-b - \sqrt{\Delta}}{2a}$.
 - $x_2 = \frac{-(-3) - \sqrt{1}}{2(1)} = \frac{3 - 1}{2} = 1$
 
 - Resultado esperado: "Duas soluções reais: x₁ = 2, x₂ = 1"
+
+
+## 🆘 Ajudas
+
+Se não conseguir encontrar uma solução, utilize os seguintes algoritmos em _pseudo-código_ para o ajudar.
+
+### `Grade`
+
+```markdown
+Entrada: nota
+Se (nota >= 90) então:
+   Exibir "Excelente"
+Senão se (nota >= 70) então:
+   Exibir "Bom"
+Senão se (nota >= 50) então:
+   Exibir "Satisfatório"
+Senão:
+   Exibir "Insuficiente"
+```
+
+### `LeapYear`
+
+```pseudocódigo
+Entrada: ano
+Se (ano % 4 == 0) então:
+   Se (ano % 100 == 0) então:
+      Se (ano % 400 == 0) então:
+         Exibir "Ano bissexto"
+      Senão:
+         Exibir "Ano não é bissexto"
+   Senão:
+      Exibir "Ano bissexto"
+Senão:
+   Exibir "Ano não é bissexto"
+```
 
 ---
 
