@@ -62,7 +62,8 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
     
     - :bulb: Ser _divisível_ significa que o resto da divisão é `0` (zero). Utilize o **operador _módulo_** para este efeito.
 
-    > [!TIP]
+    > :bulb:
+    >
     > **Descrição da lógica necessária a implementar**
     > - Primeiro, verifica-se se o ano é divisível por 4. Se não for, o ano não é bissexto.
     > - Se for divisível por 4, verifica-se se é divisível por 100. Se não for, o ano é bissexto.
@@ -93,12 +94,13 @@ Sempre que necessitar de mudar de algoritmo para execução, altere a função i
    - Por fim, indica quem ganhou (i.e., o programa ou o utilizador) seguindo as regras do jogo: a tesoura ganha ao papel, a pedra ganha à tesoura e o papel ganha à pedra.
      - Pense na forma mais simples de testar todas as possíveis situações/condições; 
 
-   > [!TIP]
+   > :bulb:
+   >
    > Utilize uma atribuição, e.g., `x = Random(3)` para gerar um número no intervalo `[0,2]`. `Random` é uma função existente no Flowgorithm - pode consultar as funções existentes [aqui](http://www.flowgorithm.org/documentation/language/intrinsic-functions.html).
 
 ---
 
-6. Se tiver tempo durante o laboratório, idealize um pequeno problema que gostasse de resolver através de um algoritmo. Proceda à sua implementação.
+1. Se tiver tempo durante o laboratório, idealize um pequeno problema que gostasse de resolver através de um algoritmo. Proceda à sua implementação.
 
 
 ## Exercício Autónomo (TPC) :rocket:
